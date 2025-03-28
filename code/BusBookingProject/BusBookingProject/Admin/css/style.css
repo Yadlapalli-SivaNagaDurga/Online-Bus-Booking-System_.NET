@@ -1,0 +1,160 @@
+/* General reset */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #BDE8CA; /* Use a softer green background */
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1ab188;
+    transition: 0.5s ease;
+}
+
+    a:hover {
+        color: #179b77;
+    }
+
+/* Form container */
+.container {
+    margin-top: 5%;
+    padding: 0 15px;
+}
+
+/* Centered form */
+.row.centered-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.panel {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+
+.panel-heading {
+    background-color: #1ab188;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.panel-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Input fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    input:focus, textarea:focus {
+        outline: none;
+        border-color: #1ab188;
+        box-shadow: 0 0 5px rgba(26, 188, 155, 0.5);
+    }
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #1ab188;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover, .btn:hover {
+        background-color: #179b77;
+    }
+
+/* Validation messages */
+.text-danger {
+    color: red;
+    font-size: 14px;
+}
+
+/* Add some spacing to the footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Specific alignment tweaks for the layout */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .top-row > div {
+        width: 48%;
+    }
+
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .top-row {
+        flex-direction: column;
+    }
+
+        .top-row > div {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+    .panel {
+        padding: 15px;
+    }
+}
+
+/* Add space between sections */
+footer section {
+    display: inline-block;
+    margin: 0 10px;
+}
